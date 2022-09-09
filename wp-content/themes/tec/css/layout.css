@@ -1,0 +1,328 @@
+/* Copyright (C) 2007 - 2011 YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+ 
+ 
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height: 140%;
+	color: #464547;
+	position: relative;
+}
+
+ 
+
+.wrapper { margin: auto; }
+
+#header {
+	margin: 0px 0px 18px 0px;
+	padding: 0px 0px 0px 0px;
+	position: relative;
+	z-index: 10;
+	clear: both;
+}
+
+#top {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	overflow: hidden;
+	clear: both;
+}
+
+#middle {
+	clear: both;
+}
+
+#bottom {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	overflow: hidden;
+	clear: both;
+}
+
+#footer {
+	position: relative;
+	margin: 40px 0px 0px 0px;
+	padding: 0px 0px 20px 0px;
+	clear: both;
+	color: #5A5C5E;
+	font-size: 10px;
+	text-align: center;
+}
+
+
+	
+ 
+ 
+#middle {
+	width: 100%;  
+	 
+	overflow: hidden;  
+	position: relative;  
+}
+
+#middle-expand {
+	width: 200%;
+}
+
+ 
+#main {
+	position: relative;
+	left: 50%;
+	width: 50%;
+	float: left;
+}
+
+#main-shift {
+	position: relative;
+	left: -100%;
+	 
+	 
+	overflow: hidden;
+}
+
+ 
+#left {
+	position: relative;
+	left: -50%;
+	 
+	float: left;
+	overflow:hidden;
+}
+
+ 
+#right {
+	 
+	 
+	position: relative;
+	float: left;
+	overflow:hidden;
+}
+
+ 
+
+#maintop,
+#contenttop {
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+}
+
+#contentbottom,
+#mainbottom {
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+}
+
+ 
+ 
+#mainmiddle {
+	width: 100%;  
+	 
+	overflow: hidden;  
+	position: relative;  
+}
+
+#mainmiddle-expand {
+	width: 200%;
+}
+
+ 
+#content {
+	position: relative;
+	left: 50%;
+	width: 50%;
+	float: left;
+}
+
+#content-shift {
+	position: relative;
+	left: -100%;
+	 
+	 
+	overflow: hidden;
+}
+
+ 
+#contentleft {
+	position: relative;
+	left: -50%;
+	 
+	float: left;
+	overflow:hidden;
+}
+
+ 
+#contentright {
+	 
+	 
+	position: relative;
+	float: left;
+	overflow:hidden;
+}
+
+ 
+
+.floatbox { overflow:hidden; }
+
+.float-left { float: left; overflow: hidden; }
+.float-right { float: right; overflow: hidden; }
+
+.width15 { width: 15%; }
+.width18 { width: 18%; }
+.width20 { width: 20%; }
+.width23 { width: 23%; }
+.width25 { width: 25%; }
+.width33 { width: 33%; }
+.width34 { width: 34%; }
+.width35 { width: 35%; }
+.width40 { width: 40%; }
+.width46 { width: 46%; }
+.width50 { width: 50%; }
+.width54 { width: 54%; }
+.width65 { width: 65%; }
+.width67 { width: 67%; }
+.width75 { width: 75%; }
+.width100 { width: 100%; }
+
+#top > .vertical,
+#bottom > .vertical { float: left; }
+
+ 
+
+body.yoopage {  }
+#page-body .page-body-1 { 
+
+}
+#page-body .page-body-2 {  }
+#page-body { 
+
+}
+.home-page #page-footer { }
+#page-footer { background: url(../images/footer-bg.gif) center -6px no-repeat; }
+ 
+
+#absolute {
+	position: absolute;
+	z-index: 15;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+ 
+
+#toolbar {
+	height: 40px;
+	padding: 0px 220px 0px 0px;
+	overflow: hidden;
+	color: #605B5B;
+	line-height: 40px;
+	font-size: 11px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,1);
+	display: none;
+}
+
+#date {
+	padding: 0px 10px 0px 0px;
+	float: left;
+}
+
+#headerbar { 
+	padding: 75px 0px 20px 0px;
+	min-height: 90px;
+	overflow: hidden;
+}
+
+#logo {
+	position: absolute;
+	top: 75px;
+	left: 50px;
+}
+
+#search {
+	position: absolute;
+	top: 7px;
+	right: 0px;
+	z-index: 12;
+}
+
+div.menubar {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 66px;
+}
+
+div.menubar .menu-t1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 10px;
+	background: url(../images/menu-bg.png) center top no-repeat;
+	z-index: 3;
+}
+div.menubar .menu-b1 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 12px;
+	background: url(../images/menu-bg.png) center bottom no-repeat;
+	z-index: 2;
+}
+
+#menu-main-menu { position: relative; z-index: 2; }
+
+#menu { margin: auto; }
+
+#banner {
+	position: absolute;
+	top: 138px;
+	right: -43px;
+	width: 0px;
+	z-index: 3;
+}
+
+ 
+
+#footer a.anchor {
+	position: absolute;
+	right: 0px;
+	top: 15px;
+	width: 35px;
+	height: 35px;
+	background: url(../images/footer_anchor.png) 0 0 no-repeat;
+	display: block;
+	text-decoration: none;
+}
+
+#footer a.anchor:hover { background-position: 0 -40px; }
+
+ 
+
+#component {
+
+}
+
+
+#left div.left-1,
+#contentleft div.contentleft-1 { 
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-right: 0px solid #222426;
+}
+
+#right div.right-1,
+#contentright div.contentright-1 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-left: 0px solid #222426;
+}

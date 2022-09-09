@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Shopping Cart</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<link rel="icon" href="/thetoolkit/skin/frontend/default/tec/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/thetoolkit/skin/frontend/default/tec/favicon.ico" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '/thetoolkit/js/blank.html';
+    var BLANK_IMG = '/thetoolkit/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/thetoolkit/skin/frontend/default/tec/css/styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/thetoolkit/skin/frontend/default/tec/css/jquery.fancybox-1.3.4.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/thetoolkit/skin/frontend/base/default/css/widgets.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/thetoolkit/skin/frontend/default/default/css/print.css" media="print" />
+<script type="text/javascript" src="/thetoolkit/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/lib/ccard.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/prototype/validation.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/scriptaculous/builder.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/scriptaculous/effects.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/scriptaculous/dragdrop.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/scriptaculous/controls.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/scriptaculous/slider.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/varien/js.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/varien/form.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/varien/menu.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/mage/translate.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/mage/cookies.js"></script>
+<script type="text/javascript" src="/thetoolkit/js/varien/weee.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/cufon-yui.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/Trade_Gothic_LT_Std_700.font.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/Caecilia_LT_Std_italic_400.font.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/Caecilia_LT_Std_300.font.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/TradeGothic_LT_CondEighteen_500.font.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/jquery.min.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/jquery.form-n-validate.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/default/tec/js/frontend.js"></script>
+<!--[if gte IE 7]>
+<link rel="stylesheet" type="text/css" href="/thetoolkit/skin/frontend/default/tec/css/styles-ie.css" media="all" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script type="text/javascript" src="/thetoolkit/js/lib/ds-sleight.js"></script>
+<script type="text/javascript" src="/thetoolkit/skin/frontend/base/default/js/ie6.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path     = '/thetoolkit';
+Mage.Cookies.domain   = '.www.theexceptionalcreative.com';
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = [];
+//]]>
+</script>
+<script type="text/javascript">var Translator = new Translate({"Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter."});</script></head>
+<body class=" checkout-cart-index">
+<div class="wrapper">
+        <noscript>
+        <div class="noscript">
+            <div class="noscript-inner">
+                <p><strong>JavaScript seem to be disabled in your browser.</strong></p>
+                <p>You must have JavaScript enabled in your browser to utilize the functionality of this website.</p>
+            </div>
+        </div>
+    </noscript>
+    <div class="page">
+        <div class="header-container">
+    <div class="header">
+        <div id="cartbuttons"><a title="View Cart" href="/thetoolkit/index.php/checkout/cart">View Cart</a> // <a title="Checkout" href="/thetoolkit/index.php/checkout">Checkout</a></div>        <a href="/" title="The Exceptional Creative" class="logo"><strong>The Exceptional Creative</strong><img src="/thetoolkit/skin/frontend/default/tec/images/logo.png" alt="The Exceptional Creative" /></a>
+        <div class="quick-access">
+            <form id="search_mini_form" action="/thetoolkit/index.php/catalogsearch/result/" method="get">
+    <div class="form-search">
+        <label for="search">Search:</label>
+        <input id="search" type="text" name="q" value="" class="input-text" />
+        <button type="submit" title="Search" class="button"><span><span>Search</span></span></button>
+        <div id="search_autocomplete" class="search-autocomplete"></div>
+        <script type="text/javascript">
+        //<![CDATA[
+            var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Search entire store here...');
+            searchForm.initAutocomplete('/thetoolkit/index.php/catalogsearch/ajax/suggest/', 'search_autocomplete');
+        //]]>
+        </script>
+    </div>
+</form>
+            <p class="welcome-msg">Success comes from being the exception to the rule</p>
+            <ul class="links">
+                        <li class="first" ><a href="/thetoolkit/index.php/customer/account/" title="My Account" >My Account</a></li>
+                                <li ><a href="/thetoolkit/index.php/checkout/cart/" title="My Cart" class="top-link-cart">My Cart</a></li>
+                                <li ><a href="/thetoolkit/index.php/checkout/" title="Checkout" class="top-link-checkout">Checkout</a></li>
+                                <li ><a href="/thetoolkit/index.php/" title="Blog" >Blog</a></li>
+                                <li class=" last" ><a href="/thetoolkit/index.php/customer/account/login/" title="Log In" >Log In</a></li>
+            </ul>
+                    </div>
+        
+
+<div class="menubar">
+<div class="menu-t1"></div>
+<div id="menu">
+	<ul class="menu menu-dropdown" id="menu-main-menu">
+		
+			
+			<li class="level1 item1 first">
+				<a class="level1 item1 first" href="/"><span class="bg">Home</span></a>
+			</li>
+		
+			
+			<li class="level1 item2">
+				<a class="level1 item2" href="/?page_id=117"><span class="bg">About</span></a>
+			</li>
+		
+			
+			<li class="level1 item3">
+				<a class="level1 item3" href="/?page_id=49"><span class="bg">The Toolkit</span></a>
+			</li>
+		
+			
+			<li class="level1 item4">
+				<a class="level1 item4" href="/blog"><span class="bg">The Blog</span></a>
+			</li>
+		
+			
+			<li class="level1 item5">
+				<a class="level1 item5" href="/?cat=7"><span class="bg">Resources</span></a>
+			</li>
+		
+			
+			<li class="level1 item6 active">
+				<a class="level1 item6 active" href="/thetoolkit/shop"><span class="bg">Shop</span></a>
+			</li>
+			</ul>
+</div>
+<div class="menu-b1"></div>
+</div>
+
+
+<div class="submenubar">
+<div id="menu">
+	<ul class="menu menu-dropdown" id="menu-main-menu">
+		
+						<li class="level1 item1 first">
+				<a class="level1 item1 first" href="/?page_id=49"><span class="bg">What It Is</span></a>
+			</li>
+		
+						<li class="level1 item2">
+				<a class="level1 item2" href="/?page_id=110"><span class="bg">What It Includes</span></a>
+			</li>
+		
+						<li class="level1 item3">
+				<a class="level1 item3" href="/?page_id=114"><span class="bg">How To Use It</span></a>
+			</li>
+		
+						<li class="level1 item4 active">
+				<a class="level1 item4 active" href="/thetoolkit/buy-it.html"><span class="bg">Buy It</span></a>
+			</li>
+		
+						<li class="level1 item5">
+				<a class="level1 item5" href="/?page_id=53"><span class="bg">FAQ</span></a>
+			</li>
+			</ul>
+</div>
+</div>
+
+		
+		
+		
+		
+		
+		    </div>
+</div>
+
+        <div class="main-container col1-layout">
+            <div class="main">
+                                <div class="col-main">
+                                        <div class="empty-text">
+	Your cart's empty.<br/>What are you waiting for? Fill it up!
+</div>
+<div class="category-products">
+                <ol class="products-list" id="products-list">
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/buy-it.html" title="A Toolkit for Designers" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/156x120/9df78eab33525d08d6e5fb8d27136e95/t/e/tec-product-image-thumb.jpg" alt="A Toolkit for Designers" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/buy-it.html" title="A Toolkit for Designers">-->A Toolkit for Designers<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p><strong>Click to purchase A Toolkit for Designers, including:</strong> - Client Contact Form - Client Contract - Client Questionnaire - Estimate Template - Fax Coversheet Template - Invoice Template - Meeting Agenda Template - Docket Spreadsheet - And more!</p>
+<p><em>See everything it includes <a href="/what-it-includes/" target="_self">here</a>. </em></p>
+<p><strong>Save $30 and get additional resources by purchasing the entire toolkit at once (compared to purchasing all individual pieces).</strong><em><br /></em></p>                        <!--<a href="/thetoolkit/index.php/buy-it.html" title="A Toolkit for Designers" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$195</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/1/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/what-s-your-hourly-rate.html" title="What’s your hourly rate?" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/156x157/9df78eab33525d08d6e5fb8d27136e95/r/e/resource-01.jpg" alt="What’s your hourly rate?" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/what-s-your-hourly-rate.html" title="What’s your hourly rate?">-->What’s your hourly rate?<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>Are you charging enough for your work? Maybe you&rsquo;re afraid your asking for too much. Originally created for <a href="http://www.aigaportland.org" target="_blank">AIGA Portland</a>, this 2-page, downloadable PDF worksheet helps you figure out what your hourly rate should be.</p>                        <!--<a href="/thetoolkit/index.php/what-s-your-hourly-rate.html" title="What’s your hourly rate?" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$5</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/2/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/client-contact-form-template.html" title="Client Contact Form" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0000_client_contact_form.jpg" alt="Client Contact Form" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/client-contact-form-template.html" title="Client Contact Form">-->Client Contact Form<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>Are you always scrambling to track down a client's phone number or  mailing address? Want to know what time of day is best to call? Include  this form with your Studio Contract and Client Questionnaire when you  bring on a new client so you don't have to scramble anymore. It comes as  a full-editable InDesign&reg; document, ready for you to customize and  incorporate into your clients' experience.</p>
+<p><strong>Comes with:</strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p><strong>This file is included the full toolkit, also available in the shop ($195). </strong><em>The      toolkit was created for designers who own Adobe&reg; Creative Suite&reg;,      particularly InDesign&reg;. These files are prepared for CS5 (INDD) and      earlier versions (IDML).</em></p>                        <!--<a href="/thetoolkit/index.php/client-contact-form-template.html" title="Client Contact Form" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$5</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/3/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/client-contract.html" title="Client Contract" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0001_client_contract.jpg" alt="Client Contract" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/client-contract.html" title="Client Contract">-->Client Contract<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>Don't let lawyers scare you. If you're ready to step it up and get  your studio agreements in writing (always!), we've got some good news:  The legal work has already been done for you. Hallelujah. Simply  customize the template and follow the steps outline in the Guide that  comes with each purchase. This is a general use contract that works to  cover your bases in a standard fashion. Legal trouble is the last thing  you need.</p>
+<p><strong>Comes with:</strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p><strong>This file is included the full toolkit, also available in the shop ($195). </strong><em>The    toolkit was created for designers who own Adobe&reg; Creative Suite&reg;,    particularly InDesign&reg;. These files are prepared for CS5 (INDD) and    earlier versions (IDML).</em></p>                        <!--<a href="/thetoolkit/index.php/client-contract.html" title="Client Contract" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$150</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/4/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/client-questionnaire.html" title="Client Questionnaire" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0002_questionnaire.jpg" alt="Client Questionnaire" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/client-questionnaire.html" title="Client Questionnaire">-->Client Questionnaire<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>This form is the best tool you can have in your arsenal for finding  out what makes your clients tick. It includes twelve core questions for  your clients to answer like "What are the goals and objectives of your  company?" and "What are the common characteristics of your customers?".  The download also includes sections specifically for logo and website  projects.  The first step to a successful relationship is listening. Let this  questionnaire help.</p>
+<p><strong>Comes with:</strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p><strong>This file is included the full toolkit, also available in the shop ($195). </strong><em>The       toolkit was created for designers who own Adobe&reg; Creative Suite&reg;,       particularly InDesign&reg;. These files are prepared for CS5 (INDD) and       earlier versions (IDML).</em></p>                        <!--<a href="/thetoolkit/index.php/client-questionnaire.html" title="Client Questionnaire" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$25</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/5/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/estimate.html" title="Estimate Template" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0003_estimate.jpg" alt="Estimate Template" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/estimate.html" title="Estimate Template">-->Estimate Template<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>When you are providing creative services, it's crucial to communicate what those services cost before the work begins. By using the Estimate Template, you ensure there will be no surprises for the client on the final invoice. This template includes a disclaimer and an area for payment policy information.  This form can also serve as a Change Order - a document that outlines how the project scope has changed and what additional fees may be required to complete the work.</p>
+<p><strong>Comes with: </strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p><em><strong>This file is included the full toolkit, also available in the shop ($195).</strong> The toolkit was created for designers who own Adobe&reg; Creative Suite&reg;, particularly InDesign&reg;. These files are prepared for CS5 (INDD) and earlier versions (IDML).</em></p>                        <!--<a href="/thetoolkit/index.php/estimate.html" title="Estimate Template" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$10</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/6/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/fax-coversheet.html" title="Fax Coversheet" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0004_fax_coversheet.jpg" alt="Fax Coversheet" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/fax-coversheet.html" title="Fax Coversheet">-->Fax Coversheet<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>Yes, fax machines may be quickly finding their way to the landfills, but until they&rsquo;re 100% obsolete, there are times when your clients may request a fax. Now you&rsquo;ll be ready. Clearly, this sheet must be printed before use. You can enter your comments and other information digitally before printing, or simply write in the details on your hard copy. The template provides all the fields for the information needed to precede a fax. Easy peasy.</p>
+<p><strong>Comes with: </strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p><em><strong>This file is included the full toolkit, also available in the shop ($195).</strong> The toolkit was created for designers who own Adobe&reg; Creative Suite&reg;,  particularly InDesign&reg;. These files are prepared for CS5 (INDD) and  earlier versions (IDML).</em></p>                        <!--<a href="/thetoolkit/index.php/fax-coversheet.html" title="Fax Coversheet" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$5</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/7/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/invoice-template.html" title="Invoice Template" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0005_invoice.jpg" alt="Invoice Template" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/invoice-template.html" title="Invoice Template">-->Invoice Template<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>If you don't invoice your clients, you won't get paid. Get your paychecks rolling by staying on top of your billing with this Invoice Template. It indicates exactly what information needs to be included on every invoice. You can customize the template, fill it out and send it to your clients and the money will follow! To top it off, your clients will have more confidence in your studio because of the consistency of the template. (As a bonus, the download includes a digital PAID stamp that you can use to turn your invoices into final statements.)</p>
+<p><strong>Comes with: </strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p>- Digital PAID stamp (JPEG)</p>
+<p><em><strong>This file is included the full toolkit, also available in the shop ($195).</strong> The toolkit was created for designers who own Adobe&reg; Creative Suite&reg;,   particularly InDesign&reg;. These files are prepared for CS5 (INDD) and   earlier versions (IDML).</em></p>                        <!--<a href="/thetoolkit/index.php/invoice-template.html" title="Invoice Template" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$10</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/8/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/meeting-agenda.html" title="Meeting Agenda" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0006_meeting_agenda.jpg" alt="Meeting Agenda" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/meeting-agenda.html" title="Meeting Agenda">-->Meeting Agenda<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>To show you're organized, thoughtful and prepared, attend each client meeting with a Meeting Agenda. Clients will thank you for the focus and you'll walk away with exactly what you need. Use this template to establish your agenda format and put your best foot forward. Go forth and meet!</p>
+<p><strong>Comes with: </strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p><em><strong>This file is included the full toolkit, also available in the shop ($195).</strong> The toolkit was created for designers who own Adobe&reg; Creative Suite&reg;,    particularly InDesign&reg;. These files are prepared for CS5 (INDD) and    earlier versions (IDML).</em></p>                        <!--<a href="/thetoolkit/index.php/meeting-agenda.html" title="Meeting Agenda" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$10</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/9/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+            <li class="item last">
+            			<div class="product-image">
+            <!--<a href="/thetoolkit/index.php/studio-docket-spreadsheet.html" title="Studio Docket Spreadsheet" class="product-image">--><img src="/thetoolkit/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/e/tec_0007_studio_docket.jpg" alt="Studio Docket Spreadsheet" /><!--</a>-->
+			</div>
+                        <div class="product-shop">
+                <div class="f-fix">
+                                        <h2 class="product-name"><!--<a href="/thetoolkit/index.php/studio-docket-spreadsheet.html" title="Studio Docket Spreadsheet">-->Studio Docket Spreadsheet<!--</a>--></h2>
+
+                    <div class="desc std">
+                        <p>Enter jobs as you open them and keep the financial information up to date. The result? You&rsquo;ll stay sane and never forget to send an invoice.   You can edit these columns as you work through your jobs and quickly access critical information throughout the process.</p>
+<p><strong>Comes with: </strong></p>
+<p>- The purchased file, in multiple formats (IDML, INDD, PDF)</p>
+<p>- A Instruction Guide (PDF)</p>
+<p>- The Client Experience Diagram and Outline (PDF)</p>
+<p><em><strong>This file is included the full toolkit, also available in the shop ($195).</strong> </em><em>This file has been saved for Excel 2008 for Mac and Excel 2007 for  Windows (.xlsx), as well as Excel 98 through Excel 2004 for Mac and  Excel 97 through Excel 2003 for Windows (.xls).</em></p>                        <!--<a href="/thetoolkit/index.php/studio-docket-spreadsheet.html" title="Studio Docket Spreadsheet" class="link-learn">Learn More</a>-->
+                    </div>
+                    						<div class="price-box">
+							<span id="product-price-1" class="regular-price">
+								<span class="price">$10</span>
+							</span>                        
+						</div> 
+                                            <p><button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('/thetoolkit/index.php/checkout/cart/add/uenc/aHR0cDovL3d3dy50aGVleGNlcHRpb25hbGNyZWF0aXZlLmNvbS90aGV0b29sa2l0L2NoZWNrb3V0L2NhcnQ,/product/10/in_cart/1/')"><span><span>Add to Cart</span></span></button></p>
+                                    </div>
+            </div>
+        </li>
+        </ol>
+    <script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
+
+    
+</div>
+                 </div>
+            </div>
+        </div>
+        <div class="footer-container">
+    <div class="footer">
+        <a href="/?page_id=190">
+<div id="footerleft">
+<h3>FREE!</h3>
+<span class="white">KEEP YOUR CLIENTS HAPPY &amp; ORGANIZED.</span><span class="green">DOWNLOAD OUR FREE PDF TO LEARN MORE.</span></div>
+</a><div id="footercenter">
+<div class="module  first "><span class="title">Search</span>
+<div id="searchbox-container">
+<div id="searchbox"><form action="/" method="get"> <input name="s" type="text" value="search the site" /> <button class="magnifier"></button> </form></div>
+</div>
+</div>
+<div class="module social"><span class="title">Follow</span> <a onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','www.facebook.com']);" href="http://www.facebook.com/#!/pages/The-Exceptional-Creative/182266131798792" target="_blank"><img src="/wp-content/uploads/facebook-icon.png" alt="" /></a> <a onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','twitter.com']);" href="http://twitter.com/#!/ExceptionalC" target="_blank"><img src="/wp-content/uploads/twitter-icon.png" alt="" /></a></div>
+<div class="module last"><a class="title" href="/about/">Contact Us</a></div>
+</div><div id="footerright">
+<div class="module    first last"><span class="title">Subscribe</span> <span class="subtitle">To the mailing list</span>
+<div id="mc_embed_signup"><form id="mc-embedded-subscribe-form" class="validate" action="http://studiompdx.us1.list-manage1.com/subscribe/post?u=ec6437a6752494dc81db14ae6&amp;id=001dad8e7c" method="post">
+<div class="mc-field-group"><input id="mce-EMAIL" class="required email" name="EMAIL" type="text" value="your email" /><input id="mc-embedded-subscribe" class="btn" name="subscribe" type="submit" value=" " /></div>
+</form></div>
+<!--End mc_embed_signup--></div>
+<a href="/feed/" target="_blank"><img src="/wp-content/uploads/rss-icon.png" alt="" /></a> <span class="subtitle rss">To the rss feed</span></div>
+<div class="clearer">&nbsp;</div><div id="copy-container">
+<div id="copyleft">
+<div class="module    first last">
+<div class="execphpwidget">&copy; 2015 The Exceptional Creative.</div>
+</div>
+</div>
+<div id="copyright">
+<!--<div class="module    first last"><a href="http://www.facebook.com/#!/pages/The-Exceptional-Creative/182266131798792" target="_blank">Find us on facebook.</a> <a href="http://twitter.com/#!/ExceptionalC" target="_blank">Follow us on Twitter.</a> <a href="/?page_id=117">Contact us.</a></div>-->
+</div>
+</div>        <address></address>
+    </div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+            </div>
+</div>
+</body>
+</html>
